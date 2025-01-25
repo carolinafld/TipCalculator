@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="main_title">Tip Calculator</string>
+    <string name="main_subtitle">Fill in the fields below to calculate your bill: </string>
+    <string name="table_amount_label">Total bill amount:</string>
+    <string name="hint_table_amount">e.g. $ 100.00</string>
+    <string name="num_people_label">Number of people:</string>
+    <string name="num_people_hint">e.g. 5</string>
+    <string name="tip_percentage_label">Tip percentage:</string>
+    <string name="tip_percentage_hint">e.g. 10%</string>
+    <string name="clear">Clear</string>
+    <string name="calculate">Calculate</string>
+    <string name="summary">Summary</string>
+    <string name="summary_subtitle">Here\'s the summary of your bill:</string>
+    <string name="total_bill_for_the_table">Total bill for the table:</string>
+    <string name="number_of_people">Number of people:</string>
+    <string name="summary_tip_percentage_label">Tip percentage:</string>
+    <string name="total">TOTAL:</string>
+    <string name="start_over">Start Over</string>
+</resources>

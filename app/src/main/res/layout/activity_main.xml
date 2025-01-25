@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/main_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/main_subtitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_hint_total_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/table_amount_label"
+        app:layout_constraintStart_toStartOf="@+id/tv_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_total_bill"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_total_bill">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_table_amount"
+            android:inputType="numberDecimal"
+            android:paddingStart="0dp"
+            android:textSize="24sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_hint_num_people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/num_people_label"
+        app:layout_constraintStart_toStartOf="@+id/til_total"
+        app:layout_constraintTop_toBottomOf="@+id/til_total" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_num_people"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_num_people">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_num_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/num_people_hint"
+            android:inputType="number"
+            android:maxLength="2"
+            android:paddingStart="0dp"
+            android:textSize="24sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_hint_tip_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tip_percentage_label"
+        app:layout_constraintStart_toStartOf="@+id/til_num_people"
+        app:layout_constraintTop_toBottomOf="@+id/til_num_people" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_tip_percentage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="@+id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/tv_hint_tip_percentage"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hint_tip_percentage">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_tip_percentage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/tip_percentage_hint"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingStart="0dp"
+            android:textSize="24sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_clear"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vertical_guideline" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
